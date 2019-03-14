@@ -41,7 +41,7 @@ void sim800modem::_doline() {
 char *c = line;
 while(*c && *c<=32) c++;
 if (lcmp(&c,"OK"))  cOK++;
-else if (lcmp(&c,"ERRROR")) cERR++; 
+else if (lcmp(&c,"ERROR")) cERR++; 
 else if (lcmp(&c,"+HTTPACTION:")) {   // 0,301,333
   cOK++; strcpy(res,c);
 } 
